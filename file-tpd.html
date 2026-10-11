@@ -1,0 +1,46 @@
+
+<div class="nes-app">
+  <div class="nes-console" id="console">
+    <div class="nes-bar">
+      <div class="nes-title"><b>NES</b> web emulator</div>
+      <div class="nes-scale">
+        <button class="btn small" data-scale="1">1x</button>
+        <button class="btn small" data-scale="2">2x</button>
+        <button class="btn small" data-scale="3">3x</button>
+        <button class="btn small" data-scale="fit">Fit</button>
+      </div>
+    </div>
+    <div class="nes-screenwrap" id="screenWrap">
+      <canvas id="screen" width="256" height="240"></canvas>
+      <div class="nes-overlay" id="overlay"><b>Drop a .nes file here</b><span>or use the buttons below</span></div>
+    </div>
+    <div class="nes-controls">
+      <button class="btn primary" id="loadBtn">Load ROM</button>
+      <button class="btn" id="playBtn">Play</button>
+      <button class="btn" id="resetBtn">Reset</button>
+      <button class="btn" id="saveBtn">Save state</button>
+      <button class="btn" id="loadStateBtn">Load state</button>
+      <button class="btn" id="muteBtn">Mute</button>
+      <button class="btn" id="fsBtn">Fullscreen</button>
+      <input type="range" id="volume" min="0" max="1" step="0.01" value="0.6" title="Volume">
+      <input type="file" id="romFile" accept=".nes" hidden="">
+    </div>
+    <div class="nes-row">
+      <input class="nes-input" id="romUrl" placeholder="Paste a URL to a .nes file...">
+      <button class="btn" id="urlBtn">Load URL</button>
+    </div>
+    <div class="nes-row" id="selectRow" hidden="">
+      <select class="nes-select" id="romSelect"><option value="">Choose a bundled ROM...</option></select>
+    </div>
+    <div class="nes-status" id="status">Ready — load a ROM to begin</div>
+    <div class="nes-legend">
+      <div><b style="color:#9ca3af">Player 1</b> — <kbd>Arrows</kbd> move · <kbd>Z</kbd> A · <kbd>X</kbd> B · <kbd>Enter</kbd> Start · <kbd>Shift</kbd> Select · <kbd>Q</kbd>/<kbd>E</kbd> turbo</div>
+      <div><b style="color:#9ca3af">Player 2</b> — <kbd>W A S D</kbd> move · <kbd>K</kbd> A · <kbd>J</kbd> B · <kbd>L</kbd> Start · <kbd>H</kbd> Select</div>
+      <div>Gamepads work automatically. Click the screen once so it captures keyboard focus.</div>
+    </div>
+  </div>
+</div>
+
+
+
+
